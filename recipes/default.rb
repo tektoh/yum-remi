@@ -1,7 +1,7 @@
 
 include_recipe 'yum-epel'
 
-%w{ remi }.each do |repo|
+%w{ remi remi-php55 }.each do |repo|
   yum_repository repo do
     description node['yum'][repo]['description']
     baseurl node['yum'][repo]['baseurl']
